@@ -1,0 +1,36 @@
+Nom;Ingrédients;Prix petite;Prix grande;Prix plaque
+MARGUERITE;tomate,fromage;4,6;7,7;24
+PRINCESSE;tomate,jambon,fromage;5,2;8,3;26
+ROYALE;tomate,jambon,champignons,fromage;5,7;8,8;27
+PAYSANNE;crèmefraîche,champignons,fromage,lardons;5,7;8,8;27
+4 SAISONS;tomate,crèmefraîche,aubergine,champignons,oignons,fromage,poivrons;6,6;10,4;28
+MOZZARELLA;tomate,crèmefraîche,jambon,mozzarella,fromage;5,7;8,8;27
+CHORIZO;tomate,chorizo,merguez,fromage,lardons;6,3;10,1;28
+NAPOLITAINE;tomate,anchois,fromage,oignons;5,7;8,8;27
+MIELINO;crèmefraîche,chèvre,fromage,miel;5,7;8,8;27
+3 FROMAGES;crèmefraîche,chèvre,roquefort,fromage;6,3;9,9;28
+5 FROMAGES;crèmefraîche,parmesan,cantal,chèvre,gorgonzola,fromage;7,4;11,4;9,2
+CÉVENOLE;crèmefraîche,champignons,chèvre,fromage,lardons;6,3;9,9;28
+ROQUEFORT;crèmefraîche,champignons,roquefort,fromage;5,7;8,8;27
+PRÉSIDENT;crèmefraîche,camembert,herbesdeprovence,fromage;6,3;9,9;28
+SAUMON;crèmefraîche,saumon,fromage;6,3;9,9;28
+MILANAISE;tomate,crèmefraîche,thon,fromage,oignons;5,7;8,8;27
+PISSALADIÈRE;tomate,champignons,anchois,huiled’olive,ail,thym,fromage,oignons;7,4;11,4;29,2
+FRUITSDEMER;tomate,fruitsdemer,fromage;5,7;9;27
+MONTAGNARDE;tomate,crèmefraîche,jambon,aubergine,fromage,lardons;6,3;9,9;28
+TARTIFLETTE;crèmefraîche,pommedeterre,oignons,reblochon,fromage,lardons;7,4;11,4;29,2
+SUPRÊME;tomate,champignons,gésiers,fromage,magretdecanard,persillade;7,4;11,4;29,2
+PROVENÇALE;crèmefraîche,jambon,champignons,fromage,oignons,lardons,persillade;6,3;9,9;28
+POMPADOUR;crèmefraîche,pommesdeterre,fromage,lardons,persillade;6,3;10,1;28
+ALSACIENNE;crèmefraîche,oignons,fromage,lardons;6,3;9,9;28
+JACKY;tomate,gésiers,fromage,poivrons,persillade;6,3;10,9;28
+QUICHE;crèmefraîche,oeuf,lardons,muscade,fromage;6,6;10,3;28
+KEBAB;crèmefraîche,champignons,kebab,fromage,oignons,saucekebab;7,4;11,4;29,2
+ORIENTALE;tomate,merguez,fromage,poivrons;5,7;9;27
+ANGLAISE;tomate,bacon,oeuf,fromage;5,7;9,9;28
+GOURMANDE;tomate,viandehachée,fromage,oignons;6,6;10,3;28
+GALINETTE;crèmefraîche,poulet,oignons,curry,fromage,poivrons;7,4;11,4;29,2
+CHEF;crèmefraîche,jambon,ananas,gorgonzola,fromage;7,4;9,9;28
+BACON;tomate,bacon,gorgonzola,fromage;6,3;9,9;28
+3 JAMBONS;tomate,jambon,chorizo,fromage,lardons;6,6;10,3;28
+CALZONE‘‘chausson’’;tomate,oeuf,oignons,fromage,lardons;6,3;9,9;28
