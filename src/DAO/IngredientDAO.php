@@ -16,7 +16,7 @@ class IngredientDAO {
 
   /**
    * Constructor
-   *
+   *  
    * @param \Doctrine\DBAL\Connection The database connection object
    */
   public function __construct(Connection $db) {
