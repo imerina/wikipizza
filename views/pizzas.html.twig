@@ -1,8 +1,6 @@
-<?php
-/*
- * Maquette de la liste des pizzas
- */
-?>
+{# 
+Liste des pizzas 
+#}
 <!doctype html>
 <html>
   <head>
@@ -43,7 +41,8 @@
         {% for pizza in pizzas %}
         <article>
           <h2><a href="anglaise/{{ pizza.id_pizza }}">{{ pizza.libelle }}</a></h2>
-          <p>Tomate, bacon,oeuf, fromage</p>
+          <p>{{ pizza.afficherIngredients() }}
+          
         </article>
         {% endfor %}          
 

@@ -35,6 +35,20 @@ class Pizza {
   private $prix_plaque;
 
   /**
+   * Ingrédients de la pizza
+   * @var array
+   */
+  private $ingredients;
+
+  /**
+   * Constructor
+   * @param array The data to populate
+   */
+  function __construct($array = array()) {
+    $this->populate($array);
+  }
+
+  /**
    * Getter/Setter
    * 
    */
@@ -58,6 +72,10 @@ class Pizza {
     return $this->prix_plaque;
   }
 
+  function getIngredients() {
+    return $this->ingredients;
+  }
+
   function setId_pizza($id_pizza) {
     $this->id_pizza = $id_pizza;
   }
@@ -76,6 +94,37 @@ class Pizza {
 
   function setPrix_plaque($prix_plaque) {
     $this->prix_plaque = $prix_plaque;
+  }
+
+  function setIngredients($ingredients) {
+    $this->ingredients = $ingredients;
+  }
+
+  /**
+   * Populate object properties with array
+   * @param array the array containing data
+   */
+  function populate(array $array) {
+    foreach ($array as $key => $value) {
+      $method = 'set' . ucfirst($key);
+      if (method_exists($this, $method)) {
+        $this->$method($value);
+      }
+    }
+  }
+
+  /**
+   * Génère la liste des ingrédients dans un format lisible
+   * @return string la liste des ingredients séparés par une virgule
+   */
+  function afficherIngredients() {
+    $chaine="";
+    $separator = ', ';
+    foreach ($this->ingredients as $ingredient) {
+      $chaine .= $ingredient->getLibelle() . $separator;
+    }
+    $chaine = ucfirst(rtrim($chaine, $separator));
+    return $chaine;
   }
 
 }

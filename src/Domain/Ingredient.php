@@ -17,6 +17,14 @@ class Ingredient {
   private $libelle;
 
   /**
+   * Constructor
+   * @param array The data to populate
+   */
+  function __construct($array = array()) {
+    $this->populate($array);
+  }
+
+  /**
    * Getter/Setter
    * 
    */
@@ -34,6 +42,19 @@ class Ingredient {
 
   function setLibelle($libelle) {
     $this->libelle = $libelle;
+  }
+
+  /**
+   * Populate object properties with array
+   * @param array the array containing data
+   */
+  function populate(array $array) {
+    foreach ($array as $key => $value) {
+      $method = 'set' . ucfirst($key);
+      if (method_exists($this, $method)) {
+        $this->$method($value);
+      }
+    }
   }
 
 }

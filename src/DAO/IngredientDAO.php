@@ -1,27 +1,14 @@
 <?php
 
+/**
+ * DAO ingrédient
+ */
+
 namespace Wikipizza\DAO;
 
-use Doctrine\DBAL\Connection;
 use Wikipizza\Domain\Ingredient;
 
-class IngredientDAO {
-
-  /**
-   * Database connection
-   *
-   * @var \Doctrine\DBAL\Connection
-   */
-  private $db;
-
-  /**
-   * Constructor
-   *  
-   * @param \Doctrine\DBAL\Connection The database connection object
-   */
-  public function __construct(Connection $db) {
-    $this->db = $db;
-  }
+class IngredientDAO extends DAO {
 
   /**
    * Retourne la liste de tous les ingrédients d'une pizza
@@ -29,27 +16,14 @@ class IngredientDAO {
    * @return array tableau des pizzas
    */
   public function findAllByPizza($id_pizza) {
-    $sql = "select * from ingredient where id_pizza=? order by id_ingredient";
-    $rows = $this->db->fetchAll($sql,array($id_pizza));
+    $sql = "SELECT i.id_ingredient,i.libelle FROM ingredient i, contient c WHERE c.id_ingredient = i.id_ingredient and c.id_pizza = ?";
+    $rows = $this->getDbh()->fetchAll($sql, array($id_pizza));
     $ingredients = array();
     foreach ($rows as $row) {
-      $id_ingredient = $row['id_ingredient'];
-      $ingredients[$id_ingredient] = $this->populate($row);
+      $ingredient = new Ingredient($row);
+      $ingredients[$ingredient->getId_ingredient()] = $ingredient;
     }
     return $ingredients;
-  }
-
-  /**
-   * Transforme un enregistrement en objet métier
-   *
-   * @param array $row
-   * @return Ingredient
-   */
-  private function populate($row) {
-    $ingredient = new Ingredient();
-    $ingredient->setId_ingredient($row['id_ingredient']);
-    $ingredient->setLibelle($row['libelle']);
-    return $ingredient;
   }
 
 }
