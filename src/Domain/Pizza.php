@@ -115,6 +115,7 @@ class Pizza {
 
   /**
    * Génère la liste des ingrédients dans un format lisible
+   * Make a comma separated list of ingredients
    * @return string la liste des ingredients séparés par une virgule
    */
   function afficherIngredients() {
@@ -123,6 +124,7 @@ class Pizza {
     foreach ($this->ingredients as $ingredient) {
       $chaine .= $ingredient->getLibelle() . $separator;
     }
+    // Remove last comma
     $chaine = ucfirst(rtrim($chaine, $separator));
     return $chaine;
   }

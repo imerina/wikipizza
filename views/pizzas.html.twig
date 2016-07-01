@@ -1,65 +1,18 @@
 {# 
 Liste des pizzas 
 #}
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{{ app.request.basepath }}/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ app.request.basepath }}/css/main.css" rel="stylesheet">
-    <title>Wikipizza - Pizzas</title>
-  </head>
-  <body>
-    <div class="container">
+{% extends "layout.html.twig" %}
 
-      <!-- Header -->
+{% block title %}Liste des pizzas{% endblock %}
 
-      <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-target">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="{{ path('home') }}">Wikipizza</a>
-          </div>
-          <div class="collapse navbar-collapse" id="navbar-collapse-target">
-
-          </div>
-        </div><!-- /.container -->
-      </nav>
-
-      <!-- Content -->
-
-      <div id="content">
+{% block content %}
         <div class="page-header">
-          <h1>Nos pizzas</h1>
+          <h1>Liste des pizzas</h1>
         </div>
         {% for pizza in pizzas %}
         <article>
-          <h2><a href="pizzas/{{ pizza.id_pizza }}">{{ pizza.libelle }}</a></h2>
+          <h2><a href="{{ path('pizza', { 'id': pizza.id_pizza }) }}">{{ pizza.libelle }}</a></h2>
           <p>{{ pizza.afficherIngredients() }}
-          
         </article>
         {% endfor %}          
-
-      </div> <!-- /.content -->
-
-    </div><!-- /.container -->
-
-    <!-- Footer -->
-    <footer class="footer">
-      <a href="https://github.com/bpesquet/OC-MicroCMS">Wikipizza</a> est un gestionnaire de pizzas.
-    </footer>
-
-    <!-- jQuery -->
-    <script src="lib/jquery/jquery.min.js"></script>
-    <!-- JavaScript Boostrap plugin -->
-    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-  </body>
-</html>
-
-
+{% endblock %}
